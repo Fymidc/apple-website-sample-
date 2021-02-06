@@ -20,6 +20,11 @@
 
 }
 
+#firstpage{
+    width: 100%;
+    height: 100%;
+}
+
 
 
 
@@ -30,6 +35,12 @@
     height: 100%;
     transition: height 1s, width 1s ease;
     
+    animation: phoneStart 1s ease-out ;
+    
+    
+   
+    animation-fill-mode: forwards;
+    
 }
 
 .container h1,span{
@@ -37,6 +48,14 @@
     top:25%;
     left: 49%;
     font-size: 20px;
+
+    animation: slideInFromRight 2s ease-out ;
+    
+    overflow: hidden;
+   
+    animation-fill-mode: forwards;
+
+
 }
 
 .container h1{
@@ -48,6 +67,7 @@
     top: 60%;
     left: 55%;
     font-weight: bolder;
+    
 
 }
 
@@ -63,9 +83,10 @@
 .learnMore{
     position: absolute;
     
-    transform: translateX(-80%) translateY(-600%);
+    margin: -20% 30% 10% -20%;
     font-size: 40px;
-    transition: transform 1s ease;
+    z-index: 2;
+    transition: margin 1s ease;
 }
 
 .landing-page-info{
@@ -84,9 +105,9 @@
 
 .landing-page-info.infoSlide{
     animation: slideInFromRight 1s ease-out ;
-    animation-delay: 2;
+    animation-delay: 1;
     overflow: hidden;
-    z-index: 3;
+    z-index: 1;
     animation-fill-mode: forwards;
 }
 .landing-page-info p{
@@ -130,6 +151,7 @@
     color: white;
     list-style: none;
     font-size: 25px;
+    cursor: pointer;
     
 }
 
@@ -154,13 +176,14 @@
     top: 14%;
     display: flex;
     align-items: center;
-    z-index: 2;
+    z-index: 5;
 }
 
 .drpdown img{
     width: 30%;
     margin-left:15px;
     background-color: #fff;
+    cursor: pointer;
 }
 
 .hamburger{
@@ -213,8 +236,15 @@
     top: 21.2%;
     position: absolute;
     width: 7%;
-    height: 380px;
+    height: 0px;
     background-color: white;
+    z-index: 5;
+    transition: height 1s ease-in;
+}
+
+.drpmenu.updown{
+    height: 380px;
+    transition: height 1s ease-in;
 }
 
 
@@ -234,6 +264,7 @@
     position: absolute;
     cursor: pointer;
     transition: top 1s ease;
+    z-index: 5;
 }
 
 
@@ -241,6 +272,7 @@
 .search-icon img{
     width: 40%;
     background-color: #fff;
+    z-index: 5;
 
 }
 
@@ -248,7 +280,7 @@
     z-index: 3;
     top: 63%;
     transition: top 1s ease;
-    
+    z-index: 5;
     
 }
 
@@ -265,11 +297,13 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    z-index: 5;
 }
 
 .shop-icon img{
     width: 45%;
     background-color: #fff;
+    z-index: 5;
 }
 
 /*Search bar üst slide*/
@@ -278,7 +312,7 @@
     width: 100%;
     height: 400px;
     background-color: white;
-    z-index: 2;
+    z-index: 5;
     position: absolute;
     transform: translateY(-100%);
     transition: transform 1s ease;
@@ -287,6 +321,7 @@
 .search-bar-top.bardown{
     transform: translateY(0%);
     transition: transform 1s ease;
+    
 }
 
 .search-bar-top form{
@@ -311,6 +346,258 @@ input[type=text]{
     padding-left: 20px;
     font-size: 18px;
 }
+
+
+
+/*CAMERA SLİDE SECTİON*/
+
+.camera-slide-up{
+    position: absolute;
+    width:100%;
+    height: 0;
+    background-color: black;
+    bottom: 0;
+    overflow: hidden;
+    
+
+
+}
+
+.camera-slide-up.slide-up{
+    
+    height: 635px;
+    transition: height 1s ease;
+    z-index: 3;
+}
+
+
+/*FLASH PHONE*/
+
+
+#img1,#img2,#img3,
+#img4,#img5{
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    width: 55%;
+    
+    transition: width 1s ,left 1s , top 1s ease-in;
+    transition-delay: 4s;
+
+}
+
+#img2,#img3,
+#img4,#img5{
+    opacity: 0;
+}
+
+
+#img5.img5{
+    animation: phoneFlash 1s ease 3s forwards;
+   
+}
+
+
+#img4.img4{
+    animation: phoneFlash 1s ease 2s forwards;
+    
+  
+}
+
+#img3.img3{
+    animation: phoneFlash 1s ease 1.5s forwards;
+   
+}
+
+#img2.img2{
+    animation: phoneFlash 1s ease 1s forwards;
+    
+}
+
+/*Camera section text*/
+
+.camera-section-header{
+    position: absolute;
+    top: 15%;
+    left: 45%;
+    color: white;
+    
+    opacity: 0;
+}
+
+.camera-section-header h1{
+    background-color: black;
+}
+
+.camera-section-header.cshslide{
+    animation: slideInFromDown 2s ease 4.6s forwards;
+}
+
+.camera-section-info{
+    position: absolute;
+    top: 35%;
+    left: 45%;
+    color: white;
+    max-width: 45%;
+    opacity: 0;
+    
+}
+
+.camera-section-info.csislide{
+    animation: slideInFromRight 2s ease 4.6s forwards;
+}
+
+.camera-section-info p{
+    padding: 5px;
+    line-height: 25px;
+    font-size: 19px;
+    background-color: black;
+}
+
+.camera-section-links{
+    position: absolute;
+    top: 65%;
+    left: 5%;
+    color: white;
+    opacity: 0;
+}
+
+.camera-section-links.cslslide{
+    animation: slideInFromDown 2s ease 4.6s forwards;
+}
+
+.camera-section-links ul li{
+    list-style: none;
+    padding: 12px;
+    background-color: black;
+}
+
+.camera-section-button{
+    position: absolute;
+    top: 75%;
+    left: 65%;
+    color: white;
+    opacity: 0;
+}
+
+.camera-section-button.csbslide{
+    animation: slideInFromRight 2s ease 4.6s forwards;
+}
+
+.camera-section-button button{
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    background-color: black;
+}
+
+
+/*BATTERY SLİDE UP*/
+
+.battery-slide-up{
+    position: absolute;
+    width:100%;
+    height: 0;
+    
+    bottom: 0;
+    overflow: hidden;
+
+}
+
+#yatayimg{
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+}
+
+#yatayimg.opacityy{
+    opacity: 1;
+    transition: opacity 3s ease-in;
+}
+
+.battery-slide-up.bslide-up{
+    
+    height: 635px;
+    transition: height 1s ease;
+    z-index: 3;
+}
+
+
+/*COUNTER*/
+
+#counter{
+    position: absolute;
+    top: 10%;
+    left: 32%;
+    color: white;
+    font-size: 30px;
+    background-color: transparent;
+}
+
+.battery-slide-up #batteryspan1{
+    color: white;
+    position: absolute;
+    font-size: 28px;
+    top: 10%;
+    left: 35%;
+    background-color: transparent;
+}
+
+#counter2{
+    position: absolute;
+    top: 10%;
+    left: 60%;
+    font-size:28px ;
+    color: white;
+    background-color: transparent;
+}
+
+.battery-slide-up #batteryspan2{
+    color: white;
+    position: absolute;
+    font-size: 28px;
+    top: 10%;
+    left: 58%;
+    background-color: transparent;
+
+}
+
+.battery-pil{
+    position: absolute;
+    width: 8%;
+    height: 200px;
+    top: 10%;
+    left: 44%;
+    border: 1x solid black;
+    border-radius: 25px;
+    overflow: hidden;
+}
+.battery-full{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+    transform: translateY(100%);
+    
+    background-color: rgb(8, 184, 8);
+    border-radius: 25px;
+}
+
+.battery-full.dol{
+    transform: translateY(0%);
+    transition: transform 2.5s ease;
+}
+
+#chargeimg{
+    width: 8%;
+    background-color: transparent;
+    position: absolute;
+    top: 17%;
+    left: 44%;
+    
+
+}
+
 
 
 /*ANİMATİONS*/
@@ -339,5 +626,30 @@ input[type=text]{
     100% {
       transform: translateY(0);
       opacity: 1;
+    }
+  }
+
+  @keyframes phoneStart {
+    0% {
+        transform: rotateX(-50px);
+      perspective:250px;
+      perspective-origin: left;
+    }
+    
+    100% {
+        transform: rotateX(0px);
+      perspective: 0;
+      
+    }
+  }
+
+  @keyframes phoneFlash {
+    0% {
+      opacity: 0;
+    }
+
+    
+    100% {
+       opacity: 1;
     }
   }
