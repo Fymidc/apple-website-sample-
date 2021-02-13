@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     background-color: rgb(15, 19, 32);
+    font-family: 'Barlow Condensed', sans-serif;
 }
 
 .landing-page{
@@ -61,11 +62,12 @@
 .container h1{
     font-size: 50px;
     color: white;
+    letter-spacing: 10px;
 }
 
 .container span{
     top: 60%;
-    left: 55%;
+    left: 56%;
     font-weight: bolder;
     
 
@@ -83,7 +85,7 @@
 .learnMore{
     position: absolute;
     
-    margin: -20% 30% 10% -20%;
+    margin: -20% 30% 10% -18%;
     font-size: 40px;
     z-index: 2;
     transition: margin 1s ease;
@@ -125,6 +127,7 @@
     opacity: 0;
     overflow: hidden;
     top: 75%;
+    
     height: 100px;
 }
 
@@ -240,10 +243,57 @@
     background-color: white;
     z-index: 5;
     transition: height 1s ease-in;
+    overflow: hidden;
+    
 }
 
+.drpmenu-content{
+    background-color: white;
+    display: block;
+}
+
+.drpmenu-content div{
+    margin: 20px;
+
+}
+
+.drpmenu1 p{
+    position: relative;
+    color: black;
+    background-color: white;
+    text-align: center;
+}
+.drpmenu2 p{
+    position: relative;
+    color: black;
+    background-color: white;
+text-align: center;
+}
+.drpmenu3 p{
+    position: relative;
+    color: black;
+    background-color: white;
+text-align: center;
+}
+.drpmenu4 p{
+    position: relative;
+    color: black;
+    background-color: white;
+text-align: center;
+}
+
+.drpmenu1 img,.drpmenu2 img,
+.drpmenu3 img,.drpmenu4 img{
+    width: 120%;
+    background-color: white;
+}
+
+
+
+
+
 .drpmenu.updown{
-    height: 380px;
+    height: 420px;
     transition: height 1s ease-in;
 }
 
@@ -457,7 +507,7 @@ input[type=text]{
 .camera-section-links{
     position: absolute;
     top: 65%;
-    left: 5%;
+    left: 10%;
     color: white;
     opacity: 0;
 }
@@ -478,6 +528,9 @@ input[type=text]{
     left: 65%;
     color: white;
     opacity: 0;
+    width: 15%;
+    background-color:transparent;
+    
 }
 
 .camera-section-button.csbslide{
@@ -485,12 +538,16 @@ input[type=text]{
 }
 
 .camera-section-button button{
-    color: white;
-    padding: 10px;
+    color: black;
+    padding: 2px;
     cursor: pointer;
-    background-color: black;
+    background-color: white;
+    width: 50%;
+    height: 25px;
 }
-
+.camera-section-button button:hover{
+    background-color: rgb(236, 236, 236);
+}
 
 /*BATTERY SLİDE UP*/
 
