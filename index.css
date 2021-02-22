@@ -36,7 +36,7 @@
     height: 100%;
     transition: height 1s, width 1s ease;
     
-    animation: phoneStart 1s ease-out ;
+    animation: example 1s ease-out ;
     
     
    
@@ -49,8 +49,8 @@
     top:25%;
     left: 49%;
     font-size: 20px;
-
-    animation: slideInFromRight 2s ease-out ;
+    opacity: 0;
+    animation: slideInFromRight 2s ease-out 0.8s;
     
     overflow: hidden;
    
@@ -238,11 +238,11 @@
     right: 0;
     top: 21.2%;
     position: absolute;
-    width: 7%;
-    height: 0px;
+    width: 0%;
+    height: 420px;
     background-color: white;
     z-index: 5;
-    transition: height 1s ease-in;
+    transition: width 0.5s ease-in;
     overflow: hidden;
     
 }
@@ -250,6 +250,42 @@
 .drpmenu-content{
     background-color: white;
     display: block;
+}
+
+.drpmenu1.drpSlide{  
+    opacity: 0;
+    animation: slideInFromRight 0.1s ease-in 0.2s ;
+    
+    overflow: hidden;
+   
+    animation-fill-mode: forwards;
+}
+
+.drpmenu2.drpSlide{  
+    opacity: 0;
+    animation: slideInFromRight 0.1s ease-in 0.8s;
+    
+    overflow: hidden;
+   
+    animation-fill-mode: forwards;
+}
+
+.drpmenu3.drpSlide{  
+    opacity: 0;
+    animation: slideInFromRight 0.1s ease-in 1.4s;
+    
+    overflow: hidden;
+   
+    animation-fill-mode: forwards;
+}
+
+.drpmenu4.drpSlide{  
+    opacity: 0;
+    animation: slideInFromRight 0.1s ease-in 2s;
+    
+    overflow: hidden;
+   
+    animation-fill-mode: forwards;
 }
 
 .drpmenu-content div{
@@ -293,8 +329,9 @@ text-align: center;
 
 
 .drpmenu.updown{
-    height: 420px;
-    transition: height 1s ease-in;
+    width: 7%;
+    
+    transition: width 0.5s ease-in;
 }
 
 
@@ -305,7 +342,7 @@ text-align: center;
     border: 1px solid black;
     border-radius: 0px 0px 50px 50px;
     top: 0;
-    left: 71%;
+    left: 75%;
     width: 4%;
     height: 45px;
     display: flex;
@@ -555,13 +592,14 @@ input[type=text]{
     position: absolute;
     width:100%;
     height: 0;
-    
+    background-color:black;
     bottom: 0;
     overflow: hidden;
 
 }
 
 #yatayimg{
+    margin-top: 3%;
     width: 100%;
     height: 100%;
     opacity: 0.1;
@@ -579,12 +617,35 @@ input[type=text]{
     z-index: 3;
 }
 
+#battery-top-h1{
+    position: absolute;
+    top: 8%;
+    left: 8%;
+    background-color: transparent;
+    color: white;
+    z-index: 2;
+    font-weight: bolder;
+    font-size: 45px;
+}
+
+#battery-top-h2{
+    position: absolute;
+    bottom: 13%;
+    left: 25%;
+    background-color: transparent;
+    color: white;
+    
+    font-size: 25px;
+}
+
 
 /*COUNTER*/
 
+
+
 #counter{
     position: absolute;
-    top: 10%;
+    top: 20%;
     left: 32%;
     color: white;
     font-size: 30px;
@@ -595,14 +656,14 @@ input[type=text]{
     color: white;
     position: absolute;
     font-size: 28px;
-    top: 10%;
+    top: 20%;
     left: 35%;
     background-color: transparent;
 }
 
 #counter2{
     position: absolute;
-    top: 10%;
+    top: 20%;
     left: 60%;
     font-size:28px ;
     color: white;
@@ -613,7 +674,7 @@ input[type=text]{
     color: white;
     position: absolute;
     font-size: 28px;
-    top: 10%;
+    top: 20%;
     left: 58%;
     background-color: transparent;
 
@@ -673,6 +734,7 @@ input[type=text]{
   }
 
 
+
   @keyframes slideInFromDown {
     0% {
       transform: translateY(50%);
@@ -708,5 +770,51 @@ input[type=text]{
     
     100% {
        opacity: 1;
+    }
+  }
+
+  @keyframes example {
+    from {
+       -webkit-transform: perspective(800) rotateY(75deg);
+       -webkit-transform-origin: 0% 0%;
+    }
+    to {
+       -webkit-transform: perspective(800) rotateY(0deg);
+        -webkit-transform-origin: 0% 0%;
+    }
+}
+
+  @media only screen and (max-width: 500px){
+    .container img{
+        margin-top: 10px;
+        height: 80%;
+        width: 70%;
+    }
+    .container h1,span{
+        left: 25%;
+        top: 35%;
+        background-color:transparent;  
+
+    }
+    .container span{
+        left: 30%;
+        background-color:transparent;  
+    }
+    .container span, i{
+        background-color:transparent;  
+ 
+        
+    }
+    #span1{
+        margin-left: 25%;
+    }
+    .after-learnmore-click{
+        top: 80%;
+    }
+    .drpdown{
+        right: 8%;
+    }
+    .hamburger{
+        background-color: white;
     }
   }
